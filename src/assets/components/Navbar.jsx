@@ -2,7 +2,7 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <nav class="bg-gray-100 shadow-sm">
+    <nav class="bg-gray-900 shadow-sm">
       <div class="mx-auto p-1">
         <div class="relative flex h-16">
           <div class="flex flex-1 justify-center">
@@ -15,7 +15,7 @@ function Navbar() {
                   <path d="M10.1088 0H1.55029L3.16634 3.29844V28.7038L1.55029 32H21.1922L22.9737 25.7572H10.1088V0Z" fill="#C28F2C"></path>
                 </g>
               </svg>
-              <span class="ml-3 font-bold text-xl">League of Legends</span>
+              <span class="ml-3 font-bold text-xl text-white">League of Legends</span>
             </div>
           </div>
         </div>
