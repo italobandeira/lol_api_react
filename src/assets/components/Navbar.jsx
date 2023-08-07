@@ -1,12 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
-    <nav className="bg-gray-900 shadow-sm">
+    <nav className="bg-gray-900">
       <div className="mx-auto p-1">
         <div className="relative flex h-16">
           <div className="flex flex-1 justify-center">
-            <div className="flex items-center">
+            <Link to={`/`} className="flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" className="league" width="30" height="32" viewBox="0 0 30 32" fill="none">
                 <g>
                   <path d="M1.80644 9.75049C0.655032 11.8373 0 14.2271 0 16.7683C0 19.3095 0.655032 21.7015 1.80644 23.7883V9.75049Z" fill="#C28F2C"></path>
@@ -16,7 +17,7 @@ function Navbar() {
                 </g>
               </svg>
               <span className="ml-3 font-bold text-xl text-white">League of Legends</span>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

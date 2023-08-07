@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Home() {
 
@@ -31,9 +32,9 @@ function Home() {
     <div>
       <section className="text-gray-400 bg-gray-50 body-font p-5">
         <div className="container mx-auto py-24">
-          <h2 className="text-center text-2xl font-bold text-black">ESCOLHA SEU</h2>
+          <h2 className="text-center text-2xl font-bold text-black"><i>ESCOLHA SEU</i></h2>
           <h1 className="text-center text-9xl font-bold text-black"><i>CAMPEÃO</i></h1>
-          <p class="text-center font-medium text-black mt-1">Encontre o campeão perfeito para seu estilo de jogo!</p>
+          <p className="text-center font-medium text-black mt-1">Encontre o campeão perfeito para seu estilo de jogo!</p>
         </div>
       </section>
 
@@ -57,13 +58,13 @@ function Home() {
           <div className="flex flex-wrap -m-4">
             {filter.map((champ) => {
               return (
-                <div className="p-5 mx-auto">
+                <Link to={`/champion/${champ.id}`} className="p-5 mx-auto" key={champ.id} >
                   <div className="bg-gray-800 bg-opacity-40 p-1 rounded-lg text-center hover:bg-gray-700 cursor-pointer">
                     <img className="max-h-96 rounded object-center mb-4 object-contain mx-auto" src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg`} />
-                    <h3 className="tracking-widest text-yellow-700 text-xs font-medium title-font">{champ.tags[0]}</h3>
+                    <h3 className="tracking-widest text-yellow-700 text-xs font-medium title-font">{champ.tags[0]} {champ.tags[1] ? `· ` + champ.tags[1] : ``}</h3>
                     <h1 className="text-white font-bold text-3xl mb-2"><i>{champ.name}</i></h1>
                   </div>
-                </div>
+                </Link>
               )
             })}
           </div>
