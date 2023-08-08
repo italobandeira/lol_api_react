@@ -29,11 +29,11 @@ function Home() {
   }
 
   return (
-    <div>
+    <div className='w-full'>
       <section className="text-gray-400 bg-gray-50 body-font p-5">
         <div className="container mx-auto py-24">
-          <h2 className="text-center text-2xl font-bold text-black"><i>ESCOLHA SEU</i></h2>
-          <h1 className="text-center text-9xl font-bold text-black"><i>CAMPEÃO</i></h1>
+          <h1 className="text-center min-[200px]:text-1xl sm:text-2xl font-bold text-black"><i>ESCOLHA SEU</i></h1>
+          <h1 className="text-center min-[200px]:text-6xl sm:text-9xl font-bold text-black"><i>CAMPEÃO</i></h1>
           <p className="text-center font-medium text-black mt-1">Encontre o campeão perfeito para seu estilo de jogo!</p>
         </div>
       </section>
@@ -45,7 +45,7 @@ function Home() {
               <form>
                 <div className="relative mb-2">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" fill="none" viewBox="0 0 20 20">
                       <path stroke="currentColor" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                     </svg>
                   </div>

@@ -20,17 +20,17 @@ function Champion() {
       <div className="container px-5 py-5 mx-auto flex flex-col">
         {champion.map((champ) => {
           return (
-            <div className="lg:w-9/12 mx-auto" key={champ.id}>
+            <div className="min-[200px]:w-1/1 sm:w-9/12 mx-auto" key={champ.id}>
               <div className="rounded-lg overflow-hidden">
                 <img alt="content" className="object-cover object-center h-full w-full" src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champ.id}_0.jpg`} />
               </div>
-              <div className="container mx-auto py-5">
-                <h2 className="text-center text-2xl font-bold text-white"><i>{champ.title.toUpperCase()}</i></h2>
-                <h1 className="text-center text-9xl font-bold text-white"><i>{champ.name.toUpperCase()}</i></h1>
+              <div className="w-9/12 container mx-auto py-5">
+                <h1 className="text-center min-[280px]:text-1xl sm:text-2xl font-bold text-white"><i>{champ.title.toUpperCase()}</i></h1>
+                <h1 className="text-center min-[280px]:text-6xl sm:text-9xl font-bold text-white"><i>{champ.name.toUpperCase()}</i></h1>
               </div>
               <div className="flex flex-col sm:flex-row">
-                <div className="sm:w-7/12 text-center sm:pl-48 sm:py-8">
-                  <div className="w-12 h-12 mx-auto mt-16 fill-yellow-700">
+                <div className="sm:w-7/12 text-center sm:py-8">
+                  <div className="w-12 h-12 mx-auto mt-10 fill-yellow-700">
                     <svg viewBox="0 0 100 100">
                       <path d="M67.84,56.35v5.5h0c8.62-8.62,14.37,0,14.37,0C112.14,40.78,90.35,2,90.35,2s-.72,17.24-15.08,27.77V46.29c-.24,4.79-3.84,7.9-7.43,10.06"></path>
                       <path d="M17.79,62.09s4.07-6.46,10.78-2.63L20.91,48.2l6.7-16c-17.24-10.54-18-29.93-18-29.93S-12.14,41,17.79,62.09"></path>
