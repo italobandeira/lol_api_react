@@ -8,7 +8,7 @@ function Home() {
 
   useEffect(() => {
     const fetchChampions = async () => {
-      const response = await fetch('https://ddragon.leagueoflegends.com/cdn/13.15.1/data/pt_BR/champion.json')
+      const response = await fetch('https://ddragon.leagueoflegends.com/cdn/14.3.1/data/pt_BR/champion.json')
       const data = await response.json()
       setFilter(Object.values(data.data))
       setChampions(Object.values(data.data))

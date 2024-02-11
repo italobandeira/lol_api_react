@@ -9,7 +9,7 @@ function Champion() {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/13.15.1/data/pt_BR/champion/${id}.json`)
+      const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/14.3.1/data/pt_BR/champion/${id}.json`)
       const data = await response.json()
       setChampion(Object.values(data.data))
     }
@@ -58,8 +58,8 @@ function Champion() {
               <div className="container py-24">
                 <h1 className='text-center mb-10 min-[280px]:text-5xl sm:text-5xl font-bold text-white'><i>HABILIDADES</i></h1>
                 <div className="flex min-[200px]:flex-col sm:flex-row justify-center">
-                  <div className="flex flex-col items-center text-center justify-center relative mb-10">
-                    <img className='rounded mt-10' src={`http://ddragon.leagueoflegends.com/cdn/13.15.1/img/passive/${champ.passive.image.full}`} />
+                  <div className="flex flex-col items-center text-center justify-center relative mb-10 border-gray-800 sm:border-t-0 border-t">
+                    <img className='rounded mt-10' src={`http://ddragon.leagueoflegends.com/cdn/14.3.1/img/passive/${champ.passive.image.full}`} />
                     <div className="flex-grow pt-14 px-4">
                       <h2 className="font-medium title-font text-sm text-white mb-1">PASSIVA</h2>
                       <h2 className="min-[280px]:text-2xl sm:text-lg font-medium text-white mb-1">{champ.passive.name}</h2>
@@ -69,7 +69,7 @@ function Champion() {
                   {champ.spells.map((c) => {
                     return (
                       <div className="flex flex-col items-center text-center justify-center relative mb-10 border-gray-800 sm:border-t-0 border-t" key={c.id}>
-                        <img className='rounded mt-10' src={`http://ddragon.leagueoflegends.com/cdn/13.15.1/img/spell/${c.image.full}`} />
+                        <img className='rounded mt-10' src={`http://ddragon.leagueoflegends.com/cdn/14.3.1/img/spell/${c.image.full}`} />
                         <div className="flex-grow pt-14 px-4">
                           <h2 className="font-medium text-sm text-white mb-1">MAGIA</h2>
                           <h2 className="min-[280px]:text-2xl sm:text-lg font-medium text-white mb-1">{c.name}</h2>
